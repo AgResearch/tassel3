@@ -1,0 +1,35 @@
+diff -Naur unpatched/src/net/maizegenetics/pal/distance/PairwiseDistance.java unicode.patched/src/net/maizegenetics/pal/distance/PairwiseDistance.java
+--- unpatched/src/net/maizegenetics/pal/distance/PairwiseDistance.java	1970-01-01 12:00:01.000000000 +1200
++++ unicode.patched/src/net/maizegenetics/pal/distance/PairwiseDistance.java	2024-11-21 09:29:16.748869198 +1300
+@@ -185,7 +185,7 @@
+             // Determine ML distance
+             of.setSequences(s1, s2);
+             if (start > BranchLimits.MAXARC || start < BranchLimits.MINARC) {
+-                // Don�t use start value
++                // Don't use start value
+                 dist = um.findMinimum(of, BranchLimits.FRACDIGITS);
+             } else {
+                 // Use start value
+diff -Naur unpatched/src/net/maizegenetics/pipeline/TasselPipeline.java unicode.patched/src/net/maizegenetics/pipeline/TasselPipeline.java
+--- unpatched/src/net/maizegenetics/pipeline/TasselPipeline.java	1970-01-01 12:00:01.000000000 +1200
++++ unicode.patched/src/net/maizegenetics/pipeline/TasselPipeline.java	2024-11-21 09:28:22.798873105 +1300
+@@ -175,7 +175,6 @@
+             try {
+ 
+                 String current = args[index++];
+-                current = current.replaceFirst("—", "-");
+ 
+                 if (!current.startsWith("-")) {
+                     throw new IllegalArgumentException("TasselPipeline: parseArgs: expecting argument beginning with dash: " + current);
+diff -Naur unpatched/src/net/maizegenetics/wizard/WizardController.java unicode.patched/src/net/maizegenetics/wizard/WizardController.java
+--- unpatched/src/net/maizegenetics/wizard/WizardController.java	1970-01-01 12:00:01.000000000 +1200
++++ unicode.patched/src/net/maizegenetics/wizard/WizardController.java	2024-11-21 09:14:10.023375665 +1300
+@@ -73,7 +73,7 @@
+                 }
+             }
+             //  If it is a finishable panel, close down the dialog. Otherwise,
+-            //  get the ID that the current panel identŒifies as the next panel,
++            //  get the ID that the current panel identifies as the next panel,
+             //  and display it.
+             Object nextPanelDescriptor = descriptor.getNextPanelDescriptor();
+ 
