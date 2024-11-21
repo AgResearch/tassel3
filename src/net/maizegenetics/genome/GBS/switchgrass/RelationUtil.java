@@ -30,7 +30,7 @@ public class RelationUtil {
 	CorrRecord[] doubleRsquareMaList; //switch queryIndex and hitIndex, so rsquareMaList.length * 2
 	Matrix rsquareMatrix; //Pearson correlations
 	Matrix rMatrix;
-	Matrix ldMatrix; // Inferences about linkage disequilibrium. Biometrics, 35, 235–254. Calculation without phase
+	Matrix ldMatrix; // Inferences about linkage disequilibrium. Biometrics, 35, 235-254. Calculation without phase
 	String[][] hapmapRecord;
 	byte[][] genoValue;
 

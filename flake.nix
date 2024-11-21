@@ -34,7 +34,7 @@
               ];
 
               buildPhase = ''
-                ant dist
+                ant distGBS
               '';
 
               installPhase = ''
@@ -42,7 +42,9 @@
                 mkdir -p $out/bin
                 cp run_gbs_pipeline.pl run_pipeline.pl start_tassel.pl $out/bin
                 chmod 755 $out/bin/*.pl
-                cp -a lib dist $out/bin
+                cp -a lib $out/bin
+                mkdir $out/bin/dist
+                cp -a dist/sTASSELGBS.jar $out/bin/dist/sTASSEL.jar
                 runHook postInstall
               '';
 
