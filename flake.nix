@@ -19,10 +19,7 @@
               pname = "tassel3";
               version = "3.0";
 
-              src = fetchzip {
-                url = "https://sourceforge.net/projects/tassel/files/Tassel%20${version}/2016-03-03/tassel-${version}-src-20160303.zip";
-                hash = "sha256-uoZuvVa4uXXAZkwMUI/W87nH+PBN0kORnPLefonqMOk=";
-              };
+              src = ./.;
 
               buildInputs = [
                 ant
