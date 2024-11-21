@@ -9,3 +9,17 @@ TASSEL is a software package to evaluate traits associations, evolutionary patte
 Bradbury PJ, Zhang Z, Kroon DE, Casstevens TM, Ramdoss Y, Buckler ES. (2007) [TASSEL: Software for association mapping of complex traits in diverse samples](https://tassel.bitbucket.io/docs/bradbury2007bioinformatics.pdf). Bioinformatics 23:2633-2635.
 
 TASSEL 3 is no longer being developed by its creators.  This repo contains minor changes for the version in use at AgResearch.
+
+## Nix flake
+
+The Nix flake facilitates use of this package either for local development or for incorporation into other Nix flakes.
+
+For example:
+```
+$ nix develop
+$ run_pipeline.pl
+Memory Settings: -Xms512m -Xmx1536m
+Tassel Pipeline Arguments:
+[main] INFO net.maizegenetics.pipeline.TasselPipeline - Tassel Version: 3.0.174  Date: March 3, 2016
+[main] WARN net.maizegenetics.pipeline.TasselPipeline - parseArgs: no arguments specified.
+```
