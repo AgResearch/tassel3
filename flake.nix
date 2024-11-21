@@ -38,7 +38,6 @@
               # '';
 
               patches = [
-                ./patches/unicode.patch
                 ./patches/quiet.patch
               ];
 

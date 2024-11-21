@@ -73,7 +73,7 @@ public class WizardController implements ActionListener {
                 }
             }
             //  If it is a finishable panel, close down the dialog. Otherwise,
-            //  get the ID that the current panel identŒifies as the next panel,
+            //  get the ID that the current panel identifies as the next panel,
             //  and display it.
             Object nextPanelDescriptor = descriptor.getNextPanelDescriptor();
 

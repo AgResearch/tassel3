@@ -185,7 +185,7 @@ public class PairwiseDistance implements java.io.Serializable {
             // Determine ML distance
             of.setSequences(s1, s2);
             if (start > BranchLimits.MAXARC || start < BranchLimits.MINARC) {
-                // Don�t use start value
+                // Don't use start value
                 dist = um.findMinimum(of, BranchLimits.FRACDIGITS);
             } else {
                 // Use start value
