@@ -10,6 +10,10 @@ Bradbury PJ, Zhang Z, Kroon DE, Casstevens TM, Ramdoss Y, Buckler ES. (2007) [TA
 
 TASSEL 3 is no longer being developed by its creators.  This repo contains minor changes for the version in use at AgResearch.
 
+## Documentation
+
+- [TASSEL 3 Genotyping by Sequencing (GBS) pipeline documentation](doc/TasselPipelineGBS.pdf)
+
 ## Nix flake
 
 The Nix flake facilitates use of this package either for local development or for incorporation into other Nix flakes.
