@@ -15,7 +15,7 @@
 
           tassel3 =
             with pkgs;
-            stdenv.mkDerivation rec {
+            stdenv.mkDerivation {
               pname = "tassel3";
               version = "3.0";
 
@@ -31,14 +31,6 @@
                 perl
                 jdk8
                 makeWrapper
-              ];
-
-              # unpackPhase = ''
-              #   ${unzip}/bin/unzip $src
-              # '';
-
-              patches = [
-                ./patches/quiet.patch
               ];
 
               buildPhase = ''
@@ -61,7 +53,6 @@
                   ]}"
                 done
               '';
-
             };
 
         in

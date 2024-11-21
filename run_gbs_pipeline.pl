@@ -14,8 +14,8 @@ foreach my $fn(@list){
 }
 push(@fl, "$top/dist/sTASSELGBS.jar");
 my $CP = join(":", @fl);
-print $CP;
-print "\n";
+# print $CP;
+# print "\n";
 my @args = @ARGV;
 
 system "java -classpath '$CP' -Xms512m -Xmx1536m net.maizegenetics.pipeline.TasselPipeline @args";

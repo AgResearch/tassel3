@@ -18,7 +18,7 @@ foreach my $fn(@list){
 }
 push(@fl, "$top/dist/sTASSEL.jar");
 my $CP = join(":", @fl);
-print $CP . "\n";
+# print $CP . "\n";
 
 # Scan @ARGV for Java memory arguments, and put rest in @args
 my $java_mem_min_default = "-Xms512m";
