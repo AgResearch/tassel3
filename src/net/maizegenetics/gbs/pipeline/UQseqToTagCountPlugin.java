@@ -321,7 +321,7 @@ public DataSet performFunction(DataSet input){
 				File[] parsedFiles = tagParseDir.listFiles();
 				for (int i = 0; i < parsedFiles.length; i++) {
 					ParseIn pi = new ParseIn(parsedFiles[i], tagLengthInLong);
-					String outfileS = outputDir + "/" + parsedFiles[i].getName().replace("par", "cnt");
+					String outfileS = outputDir + "/" + parsedFiles[i].getName().replaceAll("\\.par$", ".cnt");
 					TagCountMutable tcm = pi.getTagCountMutable();
 					tcm.writeTagCountFile(outfileS, FilePacking.Bit, minCount);
 				}
