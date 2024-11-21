@@ -38,7 +38,6 @@
               # '';
 
               patches = [
-                ./patches/jdk8.patch
                 ./patches/unicode.patch
                 ./patches/quiet.patch
               ];
