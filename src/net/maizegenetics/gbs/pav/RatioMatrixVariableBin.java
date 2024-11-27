@@ -252,7 +252,8 @@ public class RatioMatrixVariableBin {
             bw.close();
         }
         catch (Exception e) {
-            System.out.println(e.toString());
+            System.err.println(e.toString());
+            e.printStackTrace();
             System.exit(1);
         }
         
@@ -443,7 +444,8 @@ public class RatioMatrixVariableBin {
             dos.close();
         }
         catch (Exception e) {
-            System.out.println(e.toString());
+            System.err.println(e.toString());
+            e.printStackTrace();
             System.exit(1);
         }
     }
@@ -480,7 +482,8 @@ public class RatioMatrixVariableBin {
              }
         }
         catch(Exception e) {
-            System.out.println(e.toString());
+            System.err.println(e.toString());
+            e.printStackTrace();
             System.exit(1);
         }
     }
@@ -660,7 +663,8 @@ public class RatioMatrixVariableBin {
             bw.close();
         }
         catch (Exception e) {
-            System.out.println(e.toString());
+            System.err.println(e.toString());
+            e.printStackTrace();
             System.exit(1);
         }
         
@@ -687,7 +691,8 @@ public class RatioMatrixVariableBin {
             bw.close();
         }
         catch (Exception e) {
-            System.out.println(e.toString());
+            System.err.println(e.toString());
+            e.printStackTrace();
             System.exit(1);
         }
         
@@ -714,7 +719,8 @@ public class RatioMatrixVariableBin {
                         pMatrix[i][j][k] = TestUtils.chiSquareTest(count);
                     }
                     catch (Exception e) {
-                        System.out.println(e.toString());
+                        System.err.println(e.toString());
+                        e.printStackTrace();
                         System.exit(1);
                     }
                 }

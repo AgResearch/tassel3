@@ -65,6 +65,7 @@ public class TagJointPGMap extends TagJMap {
         }
         catch(Exception e) {
             System.out.println(e.toString());
+            e.printStackTrace();
             System.exit(1);
         }
         return ifOut;
@@ -111,7 +112,8 @@ public class TagJointPGMap extends TagJMap {
             System.out.println("Weka file is created at " + wekaFileS);
         }
         catch (Exception e) {
-            System.out.println(e.toString());
+            System.err.println(e.toString());
+            e.printStackTrace();
             System.exit(1);
         }
     }
@@ -579,7 +581,8 @@ public class TagJointPGMap extends TagJMap {
             System.out.println("Joint mapping check is written to " + outfileS);
         }
         catch (Exception e) {
-            System.out.println(e.toString());
+            System.err.println(e.toString());
+            e.printStackTrace();
             System.exit(1);;
         }
     }
@@ -679,7 +682,8 @@ public class TagJointPGMap extends TagJMap {
 			System.out.println("Binary tagPGMap file is read from " + infileS);
 		}
 		catch (Exception e) {
-			System.out.println(e.toString());
+			System.err.println(e.toString());
+      e.printStackTrace();
 			System.exit(1);
 		}
 	}
@@ -703,7 +707,8 @@ public class TagJointPGMap extends TagJMap {
 			System.out.println("Fasta file of tagPGMap output");
 		}
 		catch (Exception e) {
-			System.out.println(e.toString());
+			System.err.println(e.toString());
+      e.printStackTrace();
 			System.exit(1);
 		}
 	}
@@ -742,7 +747,8 @@ public class TagJointPGMap extends TagJMap {
 			System.out.println("Binary tagPGMap file is written in " + outfileS);
 		}
 		catch (Exception e) {
-			System.out.println(e.toString());
+			System.err.println(e.toString());
+      e.printStackTrace();
 			System.exit(1);
 		}
 	}
@@ -793,7 +799,8 @@ public class TagJointPGMap extends TagJMap {
 			System.out.println("Txt tagPGMap file is read from " + infileS);
 		}
 		catch (Exception e) {
-			System.out.println(e.toString());
+			System.err.println(e.toString());
+      e.printStackTrace();
 			System.exit(1);
 		}
 	}
@@ -858,7 +865,8 @@ public class TagJointPGMap extends TagJMap {
 			System.out.println("Txt tagPGMap file is written in " + outfileS);
 		}
 		catch (Exception e) {
-			System.out.println(e.toString());
+			System.err.println(e.toString());
+      e.printStackTrace();
 			System.exit(1);
 		}
 	}
@@ -878,7 +886,8 @@ public class TagJointPGMap extends TagJMap {
 			System.out.println("Txt tagPGMap file is written in " + outfileS);
 		}
 		catch (Exception e) {
-			System.out.println(e.toString());
+			System.err.println(e.toString());
+      e.printStackTrace();
 			System.exit(1);
 		}
 	}

@@ -41,10 +41,10 @@ public class GBSPipelineFei {
 		}
 
 		if (FileOfData[0].list().length == 0 || FileOfData[2].list().length == 0 || FileOfData[3].list().length == 0 || FileOfData[11].list().length == 0) {
-			System.out.println("Put Maize Genome File into " + FileOfData[0]);
-			System.out.println("Put Sequencing File into " + FileOfData[2]);
-			System.out.println("Put KeyFile into " + FileOfData[3]);
-			System.out.println("Put Genetic Map File into " + FileOfData[11]);
+			System.err.println("Put Maize Genome File into " + FileOfData[0]);
+			System.err.println("Put Sequencing File into " + FileOfData[2]);
+			System.err.println("Put KeyFile into " + FileOfData[3]);
+			System.err.println("Put Genetic Map File into " + FileOfData[11]);
 			System.exit(1);
 		}
 	}

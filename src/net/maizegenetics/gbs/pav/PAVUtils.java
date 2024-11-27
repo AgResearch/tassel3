@@ -545,7 +545,8 @@ public class PAVUtils {
             System.out.println("RefHitNum file is written to " + hitNumFileS);
         }
         catch (Exception e) {
-            System.out.println(e.toString());
+            System.err.println(e.toString());
+            e.printStackTrace();
             System.exit(1);
         }
     }

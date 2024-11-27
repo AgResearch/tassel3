@@ -82,7 +82,7 @@ public class Recombination implements TransitionMatrix {
 					br.close();
 				} catch (IOException e) {
 					e.printStackTrace();
-					System.exit(-1);
+					System.exit(1);
 				}
 			}
 
@@ -117,7 +117,7 @@ public class Recombination implements TransitionMatrix {
 					br.close();
 				} catch (IOException e) {
 					e.printStackTrace();
-					System.exit(-1);
+					System.exit(1);
 				}
 
 				//use taxa info to add counts for each taxon to total recombinations
@@ -267,7 +267,7 @@ public class Recombination implements TransitionMatrix {
 			br.close();
 		} catch (IOException e) {
 			e.printStackTrace();
-			System.exit(-1);
+			System.exit(1);
 			
 		}
 	}

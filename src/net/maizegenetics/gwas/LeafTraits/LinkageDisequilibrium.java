@@ -273,7 +273,7 @@ public class LinkageDisequilibrium {
 			
 		} catch (IOException e) {
 			e.printStackTrace();
-			System.exit(-1);
+			System.exit(1);
 		}
 	}
 	
@@ -380,10 +380,10 @@ public class LinkageDisequilibrium {
 			
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
-			System.exit(-1);
+			System.exit(1);
 		} catch (IOException e) {
 			e.printStackTrace();
-			System.exit(-1);
+			System.exit(1);
 		}
 		
 	}

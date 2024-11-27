@@ -147,7 +147,7 @@ public class PermutationTesterForNAMJointLinkage {
 			bw = new BufferedWriter(new FileWriter("c:/users/peter/temp/permutation_log.txt"));
 		} catch(IOException e) {
 			e.printStackTrace();
-			System.exit(-1);
+			System.exit(1);
 		}
 		return bw;
 	}
@@ -158,7 +158,7 @@ public class PermutationTesterForNAMJointLinkage {
 			bw.newLine();
 		} catch(IOException e) {
 			e.printStackTrace();
-			System.exit(-1);
+			System.exit(1);
 		}
 	}
 	
@@ -167,7 +167,7 @@ public class PermutationTesterForNAMJointLinkage {
 			bw.close();
 		} catch(IOException e) {
 			e.printStackTrace();
-			System.exit(-1);
+			System.exit(1);
 		}
 	}
 }

@@ -299,12 +299,12 @@ IntComparator comp = new IntComparator() {
 
    public static void main(String[] args) {
        if((args.length<1)||(args[0].equals("-h"))) {
-           System.out.println("Require args: inRefCountFile inCountDirectory outDistFile  (-b binaryT/F)");
+           System.err.println("Require args: inRefCountFile inCountDirectory outDistFile  (-b binaryT/F)");
            System.exit(1);
        } else if (args.length==3) {
            CreateReadsByTaxaPlasmid be=new CreateReadsByTaxaPlasmid(args[0],args[1], args[2], true);
        }  else if (args.length>3) {
-           System.out.println("Need to implement the parser");
+           System.err.println("Need to implement the parser");
            System.exit(1);
        }
   }

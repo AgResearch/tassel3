@@ -68,7 +68,7 @@ public class SnpDataRandomOrder extends SnpData {
 			pointerList.removeLast();
 		} catch (IOException e) {
 			e.printStackTrace();
-			System.exit(-1);
+			System.exit(1);
 		}
 		
 	}

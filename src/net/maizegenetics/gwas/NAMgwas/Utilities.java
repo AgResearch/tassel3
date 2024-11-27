@@ -39,7 +39,7 @@ public class Utilities {
 			return new BufferedWriter(new FileWriter(filename));
 		} catch (IOException e) {
 			e.printStackTrace();
-			System.exit(-1);
+			System.exit(1);
 		}
 		return null;
 	}
@@ -49,7 +49,7 @@ public class Utilities {
 			return new BufferedWriter(new FileWriter(filename, append));
 		} catch (IOException e) {
 			e.printStackTrace();
-			System.exit(-1);
+			System.exit(1);
 		}
 		return null;
 	}
@@ -59,7 +59,7 @@ public class Utilities {
 			return new BufferedWriter(new FileWriter(file));
 		} catch (IOException e) {
 			e.printStackTrace();
-			System.exit(-1);
+			System.exit(1);
 		}
 		return null;
 	}
@@ -69,7 +69,7 @@ public class Utilities {
 			return new BufferedWriter(new FileWriter(file, append));
 		} catch (IOException e) {
 			e.printStackTrace();
-			System.exit(-1);
+			System.exit(1);
 		}
 		return null;
 	}
@@ -81,7 +81,7 @@ public class Utilities {
 		} catch (IOException e) {
 			e.printStackTrace();
 			try{bw.flush();} catch (Exception e2) {}
-			System.exit(-1);
+			System.exit(1);
 		}
 	}
 
@@ -93,7 +93,7 @@ public class Utilities {
 		} catch (IOException e) {
 			e.printStackTrace();
 			try{bw.flush();} catch (Exception e2) {}
-			System.exit(-1);
+			System.exit(1);
 		}
 	}
 	
@@ -110,7 +110,7 @@ public class Utilities {
 			return new BufferedReader(new FileReader(filename));
 		} catch (IOException e) {
 			e.printStackTrace();
-			System.exit(-1);
+			System.exit(1);
 		}
 		return null;
 	}
@@ -143,7 +143,7 @@ public class Utilities {
 			br.close();
 		} catch (IOException e) {
 			e.printStackTrace();
-			System.exit(-1);
+			System.exit(1);
 		} 
 	}
 	
@@ -163,7 +163,7 @@ public class Utilities {
 			bw.close();
 		} catch (IOException e) {
 			e.printStackTrace();
-			System.exit(-1);
+			System.exit(1);
 		}
 	}
 	
@@ -181,7 +181,7 @@ public class Utilities {
 			for (String a : annotations) System.out.println(a);
 		} catch (IOException e) {
 			e.printStackTrace();
-			System.exit(-1);
+			System.exit(1);
 		} 
 		
 	}
@@ -225,10 +225,10 @@ public class Utilities {
 				
 			} catch (FileNotFoundException e) {
 				e.printStackTrace();
-				System.exit(-1);
+				System.exit(1);
 			} catch (IOException e) {
 				e.printStackTrace();
-				System.exit(-1);
+				System.exit(1);
 			}
 		}
 		
@@ -320,7 +320,7 @@ public class Utilities {
 
 		} catch (IOException e) {
 			e.printStackTrace();
-			System.exit(-1);
+			System.exit(1);
 		}
 	}
 
@@ -338,7 +338,7 @@ public class Utilities {
 			
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
-			System.exit(-1);
+			System.exit(1);
 		}
 	}
 	
@@ -393,7 +393,7 @@ public class Utilities {
 				bw.close();
 			} catch (IOException e) {
 				e.printStackTrace();
-				System.exit(-1);
+				System.exit(1);
 			}
 			
 		}
@@ -455,7 +455,7 @@ public class Utilities {
 			bw.close();
 		} catch (IOException e) {
 			e.printStackTrace();
-			System.exit(-1);
+			System.exit(1);
 		}
 	}
 	
@@ -501,7 +501,7 @@ public class Utilities {
 				br.close();
 			} catch(IOException e) {
 				e.printStackTrace();
-				System.exit(-1);
+				System.exit(1);
 			}
 		}
 
@@ -524,7 +524,7 @@ public class Utilities {
 			bw.close();
 		} catch(IOException e) {
 			e.printStackTrace();
-			System.exit(-1);
+			System.exit(1);
 		}
 		
 		String filename = "C:/Projects/NAM/hapmap/snpinfo/BGI-CSHLALL-UNION.HP1.snp_effects.txt";
@@ -566,7 +566,7 @@ public class Utilities {
 		} catch(IOException e) {
 			System.err.println("failed at: " + input);
 			e.printStackTrace();
-			System.exit(-1);
+			System.exit(1);
 		}
 
 		System.out.println("Printing annotation summary...");
@@ -608,7 +608,7 @@ public class Utilities {
 			bw.close();
 		} catch (IOException e) {
 			e.printStackTrace();
-			System.exit(-1);
+			System.exit(1);
 		}
 		
 		//also output annotations for each term
@@ -630,7 +630,7 @@ public class Utilities {
 			bw.close();
 		} catch (IOException e) {
 			e.printStackTrace();
-			System.exit(-1);
+			System.exit(1);
 		}
 		
 		System.out.println("Finished");
@@ -661,7 +661,7 @@ public class Utilities {
 			bw.close();
 		} catch(IOException e) {
 			e.printStackTrace();
-			System.exit(-1);
+			System.exit(1);
 		}
 		System.out.println("Finished");
 	}
@@ -698,7 +698,7 @@ public class Utilities {
 				br.close();
 			} catch (IOException e) {
 				e.printStackTrace();
-				System.exit(-1);
+				System.exit(1);
 			}
 			
 		}
@@ -747,7 +747,7 @@ public class Utilities {
 				br.close();
 			} catch (IOException e) {
 				e.printStackTrace();
-				System.exit(-1);
+				System.exit(1);
 			}
 
 		}
@@ -763,7 +763,7 @@ public class Utilities {
 			br.close();
 		} catch (IOException e) {
 			e.printStackTrace();
-			System.exit(-1);
+			System.exit(1);
 		}
 	}
 	

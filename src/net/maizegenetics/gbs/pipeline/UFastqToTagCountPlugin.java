@@ -216,9 +216,9 @@ public class UFastqToTagCountPlugin extends AbstractPlugin {
                             }
                         }
                     }catch(NullPointerException e){
-                        System.out.println("Unable to correctly parse the sequence and "
+                        System.err.println("Unable to correctly parse the sequence and "
                         + "quality score from fastq file.  Your fastq file may have been corrupted.");
-                        System.exit(0);
+                        System.exit(1);
                     }
                 }
                 System.out.println("Total number of reads in lane=" + allReads);
@@ -237,8 +237,9 @@ public class UFastqToTagCountPlugin extends AbstractPlugin {
                 br.close();
 
             } catch(Exception e) {
-                System.out.println("Catch testBasicPipeline c="+goodBarcodedReads+" e="+e);
+                System.err.println("Catch testBasicPipeline c="+goodBarcodedReads+" e="+e);
                 e.printStackTrace();
+                System.exit(1);
             }
             System.out.println("Finished reading "+(laneNum+1)+" of "+fastqFiles.length+" sequence files.");
         }
@@ -333,9 +334,10 @@ public class UFastqToTagCountPlugin extends AbstractPlugin {
                             }
                         }
                     }catch(NullPointerException e){
-                        System.out.println("Unable to correctly parse the sequence and "
+                        System.err.println("Unable to correctly parse the sequence and "
                         + "quality score from fastq file.  Your fastq file may have been corrupted.");
-                        System.exit(0);
+                  			e.printStackTrace();
+                        System.exit(1);
                     }
                 }
                 System.out.println("Total number of reads in lane=" + allReads);

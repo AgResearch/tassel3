@@ -32,11 +32,11 @@ public class plastidPipe {
 	}
 	public void checkFile() {
 		if (FileOfData[0].list().length == 0) {
-			System.out.println("Put Sequencing File into " + FileOfData[0]);
+			System.err.println("Put Sequencing File into " + FileOfData[0]);
 			System.exit(1);
 		}
 		if (FileOfData[1].list().length == 0) {
-			System.out.println("Put KeyFile into " + FileOfData[1]);
+			System.err.println("Put KeyFile into " + FileOfData[1]);
 			System.exit(1);
 		}
 	}

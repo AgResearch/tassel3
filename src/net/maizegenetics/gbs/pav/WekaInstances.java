@@ -48,7 +48,8 @@ public class WekaInstances {
             br.close();
         }
         catch (Exception e) {
-            System.out.println();
+            System.err.println();
+            e.printStackTrace();
             System.exit(1);
         }
         return cluster;
@@ -77,7 +78,8 @@ public class WekaInstances {
             bw.close();
         }
         catch (Exception e) {
-            System.out.println(e.toString());
+            System.err.println(e.toString());
+            e.printStackTrace();
             System.exit(1);
         }
     }

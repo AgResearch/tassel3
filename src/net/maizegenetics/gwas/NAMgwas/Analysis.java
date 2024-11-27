@@ -89,7 +89,7 @@ public class Analysis {
 
 			if (filename == null) {
 				System.err.println("No file name specified. Exiting program.");
-				System.exit(-1);
+				System.exit(1);
 			}
 			else {
 				FileNames files = new FileNames(filename);
@@ -128,7 +128,7 @@ public class Analysis {
 		if (name.equalsIgnoreCase("hapl")) {
 			//not implemented
 			System.out.println("Haplotype analysis is not implemented.");
-			System.exit(0);
+			System.exit(1);
 //			files.analysis = ANALYSIS_HAPLOTYPE;
 		}
 		if (name.equalsIgnoreCase("sing")) {
@@ -138,7 +138,7 @@ public class Analysis {
 		if (name.equalsIgnoreCase("perm")) {
 //			files.analysis = ANALYSIS_PERMUTATIONS;
 			System.out.println("Permutation testing is not implemented.");
-			System.exit(0);
+			System.exit(1);
 		}
 		if (name.equalsIgnoreCase("boot")) {
 			return new ModelFitterBootstrapForward(chr, files);

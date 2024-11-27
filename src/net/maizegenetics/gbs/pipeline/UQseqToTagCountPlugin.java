@@ -197,7 +197,7 @@ public DataSet performFunction(DataSet input){
                     }catch(NullPointerException e){
                         System.out.println("Read a line that lacks a sequence and "
                         + "quality score in fields 9 and 10.  Your file may have been corrupted.");
-                        System.exit(0);
+                        System.exit(1);
                     }
                     ReadBarcodeResult rr = thePBR.parseReadIntoTagAndTaxa(sequence, qualityScore, false, 0);
                     if (rr != null){
@@ -299,7 +299,7 @@ public DataSet performFunction(DataSet input){
                     }catch(NullPointerException e){
                         System.out.println("Read a line that lacks a sequence and "
                         + "quality score in fields 9 and 10.  Your file may have been corrupted.");
-                        System.exit(0);
+                        System.exit(1);
                     }
                     ReadBarcodeResult rr = thePBR.parseReadIntoTagAndTaxa(sequence, qualityScore, false, 0);
                     if (rr != null){

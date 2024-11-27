@@ -122,7 +122,7 @@ public class Analysis {
 
 			if (filename == null) {
 				System.err.println("No file name specified. Exiting program.");
-				System.exit(-1);
+				System.exit(1);
 			}
 			else {
 				FileNames files = new FileNames(filename);
@@ -152,7 +152,7 @@ public class Analysis {
 
 			if (filename == null) {
 				System.err.println("No file name specified. Exiting program.");
-				System.exit(-1);
+				System.exit(1);
 			}
 			else {
 				FileNames files = new FileNames(filename);

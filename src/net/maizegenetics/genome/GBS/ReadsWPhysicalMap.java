@@ -306,7 +306,7 @@ public class ReadsWPhysicalMap implements Reads {
 
    public static void main(String[] args) {
        if((args.length!=1)||(args[0].equals("-h"))) {
-           System.out.println("Require args: infile ");
+           System.err.println("Require args: infile ");
            System.exit(1);
        }
         else if (args.length==1) {

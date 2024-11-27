@@ -70,7 +70,7 @@ public class SNPdataNAMGBS implements SNPdata {
 			
 		} catch(IOException e) {
 			e.printStackTrace();
-			System.exit(-1);
+			System.exit(1);
 		}
 		
 		//remove taxa with no phenotype
@@ -110,7 +110,7 @@ public class SNPdataNAMGBS implements SNPdata {
 			br.close();
 		} catch(IOException e) {
 			e.printStackTrace();
-			System.exit(-1);
+			System.exit(1);
 		}
 		
 		numberOfSNPs = snpList.size();

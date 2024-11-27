@@ -31,7 +31,7 @@ public class HapData {
 		} catch (IOException e) {
 			System.err.println("Error reading haplotype file. Program ending.");
 			e.printStackTrace();
-			System.exit(-1);
+			System.exit(1);
 		}
 	}
 	
@@ -77,10 +77,10 @@ public class HapData {
 			br.readLine();
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
-			System.exit(-1);
+			System.exit(1);
 		} catch (IOException e) {
 			e.printStackTrace();
-			System.exit(-1);
+			System.exit(1);
 		}
 		
 	}

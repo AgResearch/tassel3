@@ -142,10 +142,10 @@ public class ModelFitter extends Thread {
 			
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
-			System.exit(-1);
+			System.exit(1);
 		} catch (IOException e) {
 			e.printStackTrace();
-			System.exit(-1);
+			System.exit(1);
 		}
 		
 	}
@@ -210,10 +210,10 @@ public class ModelFitter extends Thread {
 			System.out.println("count of nans = " + totalcount);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
-			System.exit(-1);
+			System.exit(1);
 		} catch (IOException e) {
 			e.printStackTrace();
-			System.exit(-1);
+			System.exit(1);
 		}
 		
 	}
@@ -253,10 +253,10 @@ public class ModelFitter extends Thread {
 			
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
-			System.exit(-1);
+			System.exit(1);
 		} catch (IOException e) {
 			e.printStackTrace();
-			System.exit(-1);
+			System.exit(1);
 		}
 
 	}
@@ -362,7 +362,7 @@ public class ModelFitter extends Thread {
 			return new BufferedWriter(new FileWriter(filename));
 		} catch (IOException e) {
 			e.printStackTrace();
-			System.exit(-1);
+			System.exit(1);
 		}
 		return null;
 	}
@@ -372,7 +372,7 @@ public class ModelFitter extends Thread {
 			return new BufferedWriter(new FileWriter(file));
 		} catch (IOException e) {
 			e.printStackTrace();
-			System.exit(-1);
+			System.exit(1);
 		}
 		return null;
 	}
@@ -382,7 +382,7 @@ public class ModelFitter extends Thread {
 			return new BufferedWriter(new FileWriter(file, append));
 		} catch (IOException e) {
 			e.printStackTrace();
-			System.exit(-1);
+			System.exit(1);
 		}
 		return null;
 	}
@@ -395,7 +395,7 @@ public class ModelFitter extends Thread {
 		} catch (IOException e) {
 			e.printStackTrace();
 			try{bw.close();} catch (Exception e2) {}
-			System.exit(-1);
+			System.exit(1);
 		}
 	}
 

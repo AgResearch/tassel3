@@ -62,11 +62,11 @@ public class StepwiseGenomeWideSnpFinder implements EventListener {
 			}
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
-			System.exit(-1);
+			System.exit(1);
 		}
 		catch (IOException e) {
 			e.printStackTrace();
-			System.exit(-1);
+			System.exit(1);
 		}
 
 		samples = new String[sampleList.size()];
@@ -129,7 +129,7 @@ public class StepwiseGenomeWideSnpFinder implements EventListener {
 				bwsteps.flush();
 			} catch (IOException e) {
 				e.printStackTrace();
-				System.exit(-1);
+				System.exit(1);
 			}
 			
 			modelEffects.add(finders[bestchr].bestEffect);
@@ -172,7 +172,7 @@ public class StepwiseGenomeWideSnpFinder implements EventListener {
 					bwmodel.newLine();
 				} catch (IOException e) {
 					e.printStackTrace();
-					System.exit(-1);
+					System.exit(1);
 				}
 			}
 			
@@ -181,7 +181,7 @@ public class StepwiseGenomeWideSnpFinder implements EventListener {
 				bwsteps.close();
 			} catch (IOException e) {
 				e.printStackTrace();
-				System.exit(-1);
+				System.exit(1);
 			}
 		}
 	}
@@ -210,7 +210,7 @@ public class StepwiseGenomeWideSnpFinder implements EventListener {
 			bwmodel.newLine();
 		} catch (IOException e) {
 			e.printStackTrace();
-			System.exit(-1);
+			System.exit(1);
 		}
 	}
 	
@@ -220,7 +220,7 @@ public class StepwiseGenomeWideSnpFinder implements EventListener {
 			bwmodel.close();
 		} catch (IOException e) {
 			e.printStackTrace();
-			System.exit(-1);
+			System.exit(1);
 		}
 	}
 	

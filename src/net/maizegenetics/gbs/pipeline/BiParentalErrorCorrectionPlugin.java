@@ -249,7 +249,7 @@ public class BiParentalErrorCorrectionPlugin extends AbstractPlugin {
 	} catch (Exception e) {
 	    myLogger.error("Catch in reading pedigree file e=" + e);
             e.printStackTrace();
-            System.out.println(inputLine);
+            System.err.println(inputLine);
             System.exit(1);
 	}
         myLogger.info(nTaxa + " taxa read from the pedigree file, "+nTaxaInFamilies+" of which belong to a biparental family with expected segregation of 1:1");

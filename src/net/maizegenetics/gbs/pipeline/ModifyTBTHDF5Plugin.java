@@ -165,7 +165,7 @@ public class ModifyTBTHDF5Plugin extends AbstractPlugin {
         for (int i = 0; i < addTBT.getTagCount(); i++) {
             if(!Arrays.equals(targetTBT.getTag(i),addTBT.getTag(i))) {
                 System.err.println("Tags are not the same for the two TBT file.  They cannot be combined.");
-                System.exit(0);
+                System.exit(1);
             }
         }
         for (int i = 0; i < addTBT.getTaxaCount(); i++) {

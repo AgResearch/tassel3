@@ -16,4 +16,4 @@ push(@fl, "$top/dist/sTASSELGBS.jar");
 my $CP = join(":", @fl);
 my @args = @ARGV;
 
-system "java -classpath '$CP' -Xms512m -Xmx512m net.maizegenetics.pipeline.TasselPipeline @args";
+exec("java -classpath '$CP' -Xms512m -Xmx512m net.maizegenetics.pipeline.TasselPipeline @args") or die("failed to exec java");

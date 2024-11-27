@@ -44,7 +44,7 @@ public class SNPCallerAgainstAnchorV2 {
         if(!infileSiteCallsName.endsWith(".txt")) return;
         if(infileSiteCallsName.toLowerCase().contains("bgi")) {isBGI=1;}
         else if(infileSiteCallsName.toLowerCase().contains("cshl")) {isBGI=0;}
-        else {System.out.println("Error all input file need to be tagged with bgi or cshl.");  System.exit(0);}
+        else {System.out.println("Error all input file need to be tagged with bgi or cshl.");  System.exit(1);}
         infileSiteCalls=new File(infileSiteCallsName);
         outfileGoodSites=new File(outfileGoodSitesName);
         outfileSiteAttributes=new File(outfileSiteAttributesName);

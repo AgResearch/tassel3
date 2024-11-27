@@ -247,7 +247,7 @@ public class ParseBarcodeFiles {
 
    public static void main(String[] args) {
        if(args.length!=3) {
-           System.out.println("Require args: inDirectory keyFile outDirectory");
+           System.err.println("Require args: inDirectory keyFile outDirectory");
            System.exit(1);
        }
        ParseBarcodeFiles be=new ParseBarcodeFiles(args[0], args[1], args[2],0,false);

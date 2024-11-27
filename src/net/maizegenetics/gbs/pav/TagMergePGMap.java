@@ -138,7 +138,8 @@ public class TagMergePGMap extends TagGWASPGMap {
             }
         }
         catch (Exception e) {
-            System.out.println(e.toString());
+            System.err.println(e.toString());
+            e.printStackTrace();
             System.exit(1);
         }
         System.out.println("TagGWASPGMap is read from " + tagMergePGMapFileS);
@@ -213,7 +214,8 @@ public class TagMergePGMap extends TagGWASPGMap {
             bw.close();
         }
         catch (Exception e) {
-            System.out.println(e.toString());
+            System.err.println(e.toString());
+            e.printStackTrace();
             System.exit(1);
         }
         System.out.println("TagGWASPGMap is written to " + tagGWASPGMapFileS);
@@ -249,7 +251,8 @@ public class TagMergePGMap extends TagGWASPGMap {
             bw.close();
         }
         catch (Exception e) {
-            System.out.println(e.toString());
+            System.err.println(e.toString());
+            e.printStackTrace();
             System.exit(1);
         }
         System.out.println("TagGWASPGMap is written to " + tagGWASPGMapFileS);
@@ -288,7 +291,8 @@ public class TagMergePGMap extends TagGWASPGMap {
             bw.close();
         }
         catch (Exception e) {
-            System.out.println(e.toString());
+            System.err.println(e.toString());
+            e.printStackTrace();
             System.exit(1);
         }
         System.out.println("TagGWASPGMap is written to " + tagGWASPGMapFileS);

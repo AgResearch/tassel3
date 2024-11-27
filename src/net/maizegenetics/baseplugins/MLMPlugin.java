@@ -706,7 +706,7 @@ class MLMNewOptionDialog extends JDialog implements ActionListener {
 	public static void main(String[] args) {
 		MLMNewOptionDialog mod = new MLMNewOptionDialog(null);
 		mod.setVisible(true);
-		System.exit(-1);
+		System.exit(0);
 	}
 }
 

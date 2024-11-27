@@ -53,7 +53,7 @@ public class FileShowing {
 				} else if (dir.equals("NormalReadsByTaxa")) {
 					getNormalReadsByTaxa(sourceDir, desDir);
 				} else {
-					System.out.println("There must be missing methods for source directories");
+					System.err.println("There must be missing methods for source directories");
 					System.exit(1);
 				}
 			}

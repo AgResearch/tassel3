@@ -95,7 +95,8 @@ public class TagJMap extends AbstractTags {
 			System.out.println("Binary tagGMapFile is read from " + mapFileS);
 		}
 		catch (Exception e) {
-			System.out.println(e.toString());
+			System.err.println(e.toString());
+      e.printStackTrace();
 			System.exit(1);
 		}
 	}
@@ -122,7 +123,8 @@ public class TagJMap extends AbstractTags {
 			System.out.println("Txt tagGMapFile is read from " + mapFileS);
 		}
 		catch (Exception e) {
-			System.out.println(e.toString());
+			System.err.println(e.toString());
+      e.printStackTrace();
 			System.exit(1);
 		}
 	}
@@ -183,7 +185,8 @@ public class TagJMap extends AbstractTags {
 			System.out.println("Binary tagGMap file is written in " + outfileS);
 		}
 		catch (Exception e) {
-			System.out.println(e.toString());
+			System.err.println(e.toString());
+      e.printStackTrace();
 			System.exit(1);
 		}
 	}

@@ -41,9 +41,9 @@ public class GBSPipelineMoira {
 		}
 
 		if (FileOfData[0].list().length == 0 || FileOfData[2].list().length == 0 || FileOfData[3].list().length == 0) {
-			System.out.println("Put Sorghum Genome File into" + FileOfData[0]);
-			System.out.println("Put Sequencing File into" + FileOfData[1]);
-			System.out.println("Put Key File into" + FileOfData[2]);
+			System.err.println("Put Sorghum Genome File into" + FileOfData[0]);
+			System.err.println("Put Sequencing File into" + FileOfData[1]);
+			System.err.println("Put Key File into" + FileOfData[2]);
 			System.exit(1);
 		}
 	}

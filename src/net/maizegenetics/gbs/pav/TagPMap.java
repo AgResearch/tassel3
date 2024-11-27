@@ -145,7 +145,8 @@ public class TagPMap extends AbstractTags {
             System.out.println("Binary tagPMapFile is read from " + tagPMapFileS);
         }
         catch (Exception e) {
-            System.out.println(e.toString());
+            System.err.println(e.toString());
+            e.printStackTrace();
             System.exit(1);
         }
     }
@@ -172,7 +173,8 @@ public class TagPMap extends AbstractTags {
             System.out.println("Binary tagPMapFile is written in " + tagPMapFileS);
         }
         catch (Exception e) {
-            System.out.println(e.toString());
+            System.err.println(e.toString());
+            e.printStackTrace();
             System.exit(1);
         }
     }

@@ -100,7 +100,8 @@ public class TagMPGMap extends TagGWASPGMap {
             System.out.println("Weka file is created at " + wekaFileS);
         }
         catch (Exception e) {
-            System.out.println(e.toString());
+            System.err.println(e.toString());
+            e.printStackTrace();
             System.exit(1);
         }
     }
@@ -168,7 +169,8 @@ public class TagMPGMap extends TagGWASPGMap {
             bw.close();
         }
         catch (Exception e) {
-            System.out.println(e.toString());
+            System.err.println(e.toString());
+            e.printStackTrace();
             System.exit(1);
         }
         System.out.println("TagGWASPGMap is written to " + tagMPGMapFileS);
@@ -200,7 +202,8 @@ public class TagMPGMap extends TagGWASPGMap {
             bw.close();
         }
         catch (Exception e) {
-            System.out.println(e.toString());
+            System.err.println(e.toString());
+            e.printStackTrace();
             System.exit(1);
         }
         System.out.println("TagGWASPGMap is written to " + tagMPGMapFileS);
@@ -239,7 +242,8 @@ public class TagMPGMap extends TagGWASPGMap {
             }
         }
         catch (Exception e) {
-            System.out.println(e.toString());
+            System.err.println(e.toString());
+            e.printStackTrace();
             System.exit(1);
         }
         System.out.println("TagGWASPGMap is read from " + tagMPGMapFileS);

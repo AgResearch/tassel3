@@ -212,7 +212,7 @@ public class Train {
             String temp;
             while ((temp = br.readLine())!= null) cnt++;
             if (cnt != tc.getTagCount()) {
-                System.out.println("tagHitFile doesn't have the right tag number");
+                System.err.println("tagHitFile doesn't have the right tag number");
                 System.exit(1);
             }
             br = new BufferedReader (new FileReader(tagHitFileS), 65536);

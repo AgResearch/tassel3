@@ -54,8 +54,8 @@ public class LinkageGroupUtils {
 			this.getLinkageGroupByTree(theNJT);
 		}
 		catch (TreeParseException e) {
-			System.out.println("Error occurred while reading NJtree " + infileS + " " + e.toString());
-			System.exit(-1);
+			System.err.println("Error occurred while reading NJtree " + infileS + " " + e.toString());
+			System.exit(1);
 		}
 	}
 

@@ -103,7 +103,7 @@ public class ModelFitterForwardRegression extends ModelFitter {
 			bw.newLine();
 		} catch (IOException e1) {
 			e1.printStackTrace();
-			System.exit(-1);
+			System.exit(1);
 		}
 		String sep = "\t";
 		
@@ -147,7 +147,7 @@ public class ModelFitterForwardRegression extends ModelFitter {
 			bw.close();
 		} catch (IOException e1) {
 			e1.printStackTrace();
-			System.exit(-1);
+			System.exit(1);
 		}
 		
 	}
@@ -161,7 +161,7 @@ public class ModelFitterForwardRegression extends ModelFitter {
 			bw.close();
 		} catch (IOException e) {
 			e.printStackTrace();
-			System.exit(-1);
+			System.exit(1);
 		}
 	}
 	
@@ -183,7 +183,7 @@ public class ModelFitterForwardRegression extends ModelFitter {
 			
 		} catch (IOException e) {
 			e.printStackTrace();
-			System.exit(-1);
+			System.exit(1);
 		}
 	}
 	

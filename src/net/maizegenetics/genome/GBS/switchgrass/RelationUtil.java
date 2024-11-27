@@ -93,8 +93,9 @@ public class RelationUtil {
 			hapmapRecord = hapmapRecordList.toArray(new String[hapmapRecordList.size()][]);
 			System.out.println("HapMap is loaded. " + String.valueOf(hapmapRecord.length) + " markers");
 		} catch (Exception e) {
-			System.out.println("Error while reading " + hapmap + " " + e.toString());
-			System.exit(0);
+			System.err.println("Error while reading " + hapmap + " " + e.toString());
+      e.printStackTrace();
+			System.exit(1);
 		}
 	}
 

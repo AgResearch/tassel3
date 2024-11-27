@@ -149,7 +149,7 @@ public class EpistasisScanForAPopulation extends Thread {
 			bw.newLine();
 		} catch (IOException e1) {
 			e1.printStackTrace();
-			System.exit(-1);
+			System.exit(1);
 		}
 		
 		ArrayList<GLMResult> resultList = new ArrayList<GLMResult>();
@@ -212,7 +212,7 @@ public class EpistasisScanForAPopulation extends Thread {
 					bw.newLine();
 				} catch (IOException e) {
 					e.printStackTrace();
-					System.exit(-1);
+					System.exit(1);
 				}
 			}
 		}
@@ -220,7 +220,7 @@ public class EpistasisScanForAPopulation extends Thread {
 			bw.close();
 		} catch (IOException e) {
 			e.printStackTrace();
-			System.exit(-1);
+			System.exit(1);
 		}
 		
 		int nResults = resultList.size();
@@ -252,7 +252,7 @@ public class EpistasisScanForAPopulation extends Thread {
 				bw.close();
 			} catch (IOException e) {
 				e.printStackTrace();
-				System.exit(-1);
+				System.exit(1);
 			}
 		}
 	}

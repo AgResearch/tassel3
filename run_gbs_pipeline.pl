@@ -18,4 +18,4 @@ my $CP = join(":", @fl);
 # print "\n";
 my @args = @ARGV;
 
-system "java -classpath '$CP' -Xms512m -Xmx1536m net.maizegenetics.pipeline.TasselPipeline @args";
+exec("java -classpath '$CP' -Xms512m -Xmx1536m net.maizegenetics.pipeline.TasselPipeline @args") or die("failed to exec java");

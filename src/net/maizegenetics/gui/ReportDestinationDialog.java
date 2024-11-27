@@ -34,7 +34,7 @@ public class ReportDestinationDialog extends JDialog {
 	public static void main(String[] args) {
 		ReportDestinationDialog rdd = new ReportDestinationDialog();
 		rdd.setVisible(true);
-		System.exit(-1);
+		System.exit(0);
 	}
 		
 	/**

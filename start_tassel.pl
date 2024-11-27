@@ -46,4 +46,4 @@ if (@args != 0){
    print "Tassel Pipeline Arguments: " . "@args\n";
 }
 
-system "java -classpath '$CP' $java_mem_min $java_mem_max net.maizegenetics.tassel.TASSELMainApp @args";
+exec("java -classpath '$CP' $java_mem_min $java_mem_max net.maizegenetics.tassel.TASSELMainApp @args") or die("failed to exec java");

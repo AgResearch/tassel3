@@ -53,7 +53,7 @@ public class QseqToTBT {
                     + "-m  Physical map file containing alignments, OR\n"
                     + "-t  Tag count file\n"
             );
-            System.exit(0);
+            System.exit(1);
 
         } else {
             ArgsEngine engine = new ArgsEngine();
@@ -70,7 +70,7 @@ public class QseqToTBT {
                 File qseqDirectory = new File(engine.getString("-i"));
                 if (!qseqDirectory.isDirectory()) {
                     System.out.println("The input name you supplied (option -i) is not a directory.");
-                    System.exit(0);
+                    System.exit(1);
                 }
                 qseqFileS = DirectoryCrawler.listFileNames(".*qseq.txt$|.*qseq.txt.gz$", qseqDirectory.getAbsolutePath());
                 if (qseqFileS.length == 0 || qseqFileS == null) {
@@ -86,25 +86,25 @@ public class QseqToTBT {
                 keyFile = engine.getString("-k");
             } else {
                 System.out.println("Please specify a key file (option -k).");
-                System.exit(0);
+                System.exit(1);
             }
             if(engine.getBoolean("-e")){
                 enzyme = engine.getString("-e");
             } else {
                 System.out.println("Please specify the enzyme used to create the GBS library (option -e).");
-                System.exit(0);
+                System.exit(1);
             }
             if (engine.getBoolean("-o")) {
                 outputDir = engine.getString("-o");
                 File outDirectory = new File(outputDir);
                 if (!outDirectory.isDirectory()) {
                     System.out.println("The output name you supplied (option -o) is not a directory.");
-                    System.exit(0);
+                    System.exit(1);
                 }
                 outDirectory = null;
             } else {
                 System.out.println("Please specify an output directory (option -o).");
-                System.exit(0);
+                System.exit(1);
             }
             if(engine.getBoolean("-c")) {
                 minCount = Integer.parseInt(engine.getString("-c"));
@@ -116,18 +116,18 @@ public class QseqToTBT {
             if (engine.getBoolean("-m")) {
                 if (engine.getBoolean("-t")) {
                     System.out.println("Options -m and -t are mutually exclusive.");
-                    System.exit(0);
+                    System.exit(1);
                 }
                 masterTags = new TagsOnPhysicalMap(engine.getString("-m"), true);
             } else if (engine.getBoolean("-t")) {
                 if (engine.getBoolean("-m")) {
                     System.out.println("Options -m and -t are mutually exclusive.");
-                    System.exit(0);
+                    System.exit(1);
                 }
                 masterTags = new TagCounts(engine.getString("-t"), FilePacking.Bit);
             } else {
                 System.out.println("Please specify a TagsOnPhysicalMap file (-m) *OR* a readCounts file (-t)");
-                System.exit(0);
+                System.exit(1);
             }
         }
         matchTagsToTaxa(qseqFileS, keyFile, enzyme, masterTags, outputDir, minCount); //Feed all data into function

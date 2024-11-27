@@ -54,7 +54,7 @@ public class BinByTaxa {
         }
         else {
             System.out.println("Doesn't support this suffix/format, program will stop");
-            System.exit(0);
+            System.exit(1);
         }
         this.calTaxaCount();
     }
@@ -140,7 +140,7 @@ public class BinByTaxa {
         int currentSize = this.binStart[0][1] - this.binStart[0][0];
         if (!(binSize%currentSize == 0)) {
             System.out.println("binSize is not qualified for merging bins");
-            System.exit(0);
+            System.exit(1);
         }
         int[][] newBinStart = new int[this.getChrNum()][];
         short[][][] newTagBinCount = new short[this.getChrNum()][][];
@@ -328,7 +328,8 @@ public class BinByTaxa {
            br.close();
         }
         catch (Exception e) {
-            System.out.println(e.toString());
+            System.err.println(e.toString());
+            e.printStackTrace();
             System.exit(1);
         }
     }
@@ -365,7 +366,8 @@ public class BinByTaxa {
             System.out.println("Binary BBT file read from " + infileS);
         }
         catch (Exception e) {
-            System.out.println(e.toString());
+            System.err.println(e.toString());
+            e.printStackTrace();
             System.exit(1);
         }
     }
@@ -398,7 +400,8 @@ public class BinByTaxa {
             System.out.println("Binary BBT file is written to " + outfileS);
         }
         catch (Exception e) {
-            System.out.println(e.toString());
+            System.err.println(e.toString());
+            e.printStackTrace();
             System.exit(1);
         }
     }
@@ -425,7 +428,8 @@ public class BinByTaxa {
             System.out.println("Txt BBT file is written to " + outfileS);
         }
         catch (Exception e) {
-            System.out.println(e.toString());
+            System.err.println(e.toString());
+            e.printStackTrace();
             System.exit(1);
         }
     }
@@ -479,7 +483,8 @@ public class BinByTaxa {
 			dis.close();
         }
         catch (Exception e) {
-            System.out.println(e.toString());
+            System.err.println(e.toString());
+            e.printStackTrace();
             System.exit(1);
         }
         

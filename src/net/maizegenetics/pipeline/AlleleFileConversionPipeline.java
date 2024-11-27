@@ -67,7 +67,7 @@ public class AlleleFileConversionPipeline{
 
                 if (!current.startsWith("-")) {
                     printUsage();
-                    System.exit(0);
+                    System.exit(1);
                 }
 
                 if (current.equalsIgnoreCase("-ih")) {
@@ -78,7 +78,7 @@ public class AlleleFileConversionPipeline{
                     else {
                         printUsage();
                         System.out.println("Error: Can only specify one set of input files.  " + current + " is invalid.");
-                        System.exit(0);
+                        System.exit(1);
                     }
                 }
                 else if (current.equalsIgnoreCase("-ip")) {
@@ -90,7 +90,7 @@ public class AlleleFileConversionPipeline{
                     else {
                         printUsage();
                         System.out.println("Error: Can only specify one set of input files.  " + current + " is invalid.");
-                        System.exit(0);
+                        System.exit(1);
                     }
                 }
                 else if (current.equalsIgnoreCase("-if")) {
@@ -102,7 +102,7 @@ public class AlleleFileConversionPipeline{
                     else {
                         printUsage();
                         System.out.println("Error: Can only specify one set of input files.  " + current + " is invalid.");
-                        System.exit(0);
+                        System.exit(1);
                     }
                 }
                 else if (current.equalsIgnoreCase("-iz")) {
@@ -113,7 +113,7 @@ public class AlleleFileConversionPipeline{
                     else {
                         printUsage();
                         System.out.println("Error: Can only specify one set of input files.  " + current + " is invalid.");
-                        System.exit(0);
+                        System.exit(1);
                     }
                 }
                 else if (current.equalsIgnoreCase("-oh")) {
@@ -124,7 +124,7 @@ public class AlleleFileConversionPipeline{
                     else {
                         printUsage();
                         System.out.println("Error: Already selected Hapmap format to output.");
-                        System.exit(0);
+                        System.exit(1);
                     }
                 }
                 else if (current.equalsIgnoreCase("-op")) {
@@ -135,7 +135,7 @@ public class AlleleFileConversionPipeline{
                     else {
                         printUsage();
                         System.out.println("Error: Already selected Plink format to output.");
-                        System.exit(0);
+                        System.exit(1);
                     }
                 }
                 else if (current.equalsIgnoreCase("-of")) {
@@ -146,7 +146,7 @@ public class AlleleFileConversionPipeline{
                     else {
                         printUsage();
                         System.out.println("Error: Already selected Flapjack format to output.");
-                        System.exit(0);
+                        System.exit(1);
                     }
                 }
                 else if (current.equalsIgnoreCase("-oz")) {
@@ -157,20 +157,20 @@ public class AlleleFileConversionPipeline{
                     else {
                         printUsage();
                         System.out.println("Error: Already selected Zip as output");
-                        System.exit(0);
+                        System.exit(1);
                     }
                 }
                 else {
                     printUsage();
                     System.out.println("Error: Unknown parameter: " + current);
-                    System.exit(0);
+                    System.exit(1);
                 }
 
             }
 
             catch (Exception e) {
                 printUsage();
-                System.exit(0);
+                System.exit(1);
             }
         }
     }
@@ -192,7 +192,7 @@ public class AlleleFileConversionPipeline{
         else {
             printUsage();
             System.out.println("Unknown Error.");
-            System.exit(0);
+            System.exit(1);
         }
 
         if (myOutputHapmap) {
@@ -217,12 +217,12 @@ public class AlleleFileConversionPipeline{
         if (!myInputHapmap && !myInputPlink && !myInputFlapjack && !myInputZip) {
             printUsage();
             System.out.println("Error: Input File must be specified.");
-            System.exit(0);
+            System.exit(1);
         }
         else if (!myOutputHapmap && !myOutputPlink && !myOutputFlapjack && !myOutputZip) {
             printUsage();
             System.out.println("Error: Output File must be specified.");
-            System.exit(0);
+            System.exit(1);
         }
     }
 

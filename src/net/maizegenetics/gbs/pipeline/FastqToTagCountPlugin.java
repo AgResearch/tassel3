@@ -215,7 +215,7 @@ public class FastqToTagCountPlugin extends AbstractPlugin {
                     }catch(NullPointerException e){
                         System.out.println("Unable to correctly parse the sequence and "
                         + "quality score from fastq file.  Your fastq file may have been corrupted.");
-                        System.exit(0);
+                        System.exit(1);
                     }
                 }
                 System.out.println("Total number of reads in lane=" + allReads);

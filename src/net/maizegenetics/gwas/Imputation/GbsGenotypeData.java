@@ -99,7 +99,7 @@ public class GbsGenotypeData implements GenotypeData {
 
 		} catch (IOException e) {
 			e.printStackTrace();
-			System.exit(-1);
+			System.exit(1);
 		}
 		
 		chromosome = mySnpList.get(0).chromosome;

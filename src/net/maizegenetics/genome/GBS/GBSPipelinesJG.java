@@ -281,7 +281,7 @@ public class GBSPipelinesJG {
             rwpmExternalVD.printRows(1000);
 
         } catch (Exception e) {
-            System.out.println("Catch: e=" + e);
+            System.err.println("Catch: e=" + e);
             e.printStackTrace();
             System.exit(1);
         }

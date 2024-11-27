@@ -188,7 +188,7 @@ public class NamGBSData {
 			
 		} catch (IOException e) {
 			e.printStackTrace();
-			System.exit(-1);
+			System.exit(1);
 		}
 
 		System.out.println("Imputing snps...");
@@ -308,7 +308,7 @@ public class NamGBSData {
 			br.close();
 		} catch (IOException e) {
 			e.printStackTrace();
-			System.exit(-1);
+			System.exit(1);
 		}
 		
 		System.out.println("Imputing snps...");
@@ -1253,7 +1253,7 @@ public class NamGBSData {
 			
 		} catch (IOException e) {
 			e.printStackTrace();
-			System.exit(-1);
+			System.exit(1);
 		}
 		
 		System.out.println("Finished calling hets.");
@@ -1301,7 +1301,7 @@ public class NamGBSData {
 				bw.close();
 			} catch (IOException e) {
 				e.printStackTrace();
-				System.exit(-1);
+				System.exit(1);
 			}
 		}
 		
@@ -1348,7 +1348,7 @@ public class NamGBSData {
 			
 		} catch(IOException e) {
 			e.printStackTrace();
-			System.exit(-1);
+			System.exit(1);
 		}
 		
 	}
@@ -1440,7 +1440,7 @@ public class NamGBSData {
 			bw.close();
 		} catch (IOException e) {
 			e.printStackTrace();
-			System.exit(-1);
+			System.exit(1);
 		}
 	}
 
@@ -1537,7 +1537,7 @@ public class NamGBSData {
 			bw.close();
 		} catch (IOException e) {
 			e.printStackTrace();
-			System.exit(-1);
+			System.exit(1);
 		}
 	}
 
@@ -1631,7 +1631,7 @@ public class NamGBSData {
 			
 		} catch(IOException e){
 			e.printStackTrace();
-			System.exit(-1);
+			System.exit(1);
 		}
 		
 		//read in the markergenotype data for this chromosome
@@ -1654,7 +1654,7 @@ public class NamGBSData {
 			br.close();
 		} catch(IOException e){
 			e.printStackTrace();
-			System.exit(-1);
+			System.exit(1);
 		}
 		
 		//read the snp data and get counts
@@ -1729,7 +1729,7 @@ public class NamGBSData {
 			br.close();
 		} catch(IOException e){
 			e.printStackTrace();
-			System.exit(-1);
+			System.exit(1);
 		}
 		
 		//code to output results to a file
@@ -1781,7 +1781,7 @@ public class NamGBSData {
 				bw.close();
 			} catch(IOException e) {
 				e.printStackTrace();
-				System.exit(-1);
+				System.exit(1);
 			}
 			System.out.println("Finished summarizing population " + pop + ".");
 		}
@@ -1825,7 +1825,7 @@ public class NamGBSData {
 			br.close();
 		} catch(IOException e) {
 			e.printStackTrace();
-			System.exit(-1);
+			System.exit(1);
 		}
 		numberOfTaxa = taxaList.size();
 		System.out.println("Number of taxa with genotypes: " + numberOfTaxa);
@@ -1978,7 +1978,7 @@ public class NamGBSData {
 			bw.close();
 		} catch(IOException e) {
 			e.printStackTrace();
-			System.exit(-1);
+			System.exit(1);
 		}
 		System.out.println("Finished.");
 	}
@@ -2009,7 +2009,7 @@ public class NamGBSData {
 			br.close();
 		} catch(IOException e) {
 			e.printStackTrace();
-			System.exit(-1);
+			System.exit(1);
 		}
 		numberOfTaxa = taxaList.size();
 		System.out.println("Number of taxa with genotypes: " + numberOfTaxa);
@@ -2075,7 +2075,7 @@ public class NamGBSData {
 			bw.close();
 		} catch(IOException e) {
 			e.printStackTrace();
-			System.exit(-1);
+			System.exit(1);
 		}
 		System.out.println("Finished.");
 	}
@@ -2128,7 +2128,7 @@ public class NamGBSData {
 				br.close();
 			} catch(IOException e) {
 				e.printStackTrace();
-				System.exit(-1);
+				System.exit(1);
 			}
 		}
 		
@@ -2178,7 +2178,7 @@ public class NamGBSData {
 			br.close();
 		} catch(IOException e) {
 			e.printStackTrace();
-			System.exit(-1);
+			System.exit(1);
 		}
 		
 		return snpList;
@@ -2274,7 +2274,7 @@ public class NamGBSData {
 			
 		} catch(IOException e) {
 			e.printStackTrace();
-			System.exit(-1);
+			System.exit(1);
 		}
 	}
 	
@@ -2310,7 +2310,7 @@ public class NamGBSData {
 			br.close();
 		} catch(IOException e) {
 			e.printStackTrace();
-			System.exit(-1);
+			System.exit(1);
 		}
 		
 		//sort the taxa
@@ -2360,7 +2360,7 @@ public class NamGBSData {
 				
 			} catch(IOException e) {
 				e.printStackTrace();
-				System.exit(-1);
+				System.exit(1);
 			}
 		}
 		for (int i = n - 1; i >= 0 ; i--) {
@@ -2377,7 +2377,7 @@ public class NamGBSData {
 			bw.close();
 		} catch(IOException e) {
 			e.printStackTrace();
-			System.exit(-1);
+			System.exit(1);
 		}
 		
 		System.out.println("Taxa written to " + outFile);
@@ -2417,7 +2417,7 @@ public class NamGBSData {
 			br.close();
 		} catch (IOException e) {
 			e.printStackTrace();
-			System.exit(-1);
+			System.exit(1);
 		}
 		
 		
@@ -2438,7 +2438,7 @@ public class NamGBSData {
 			br.close();
 		} catch (IOException e) {
 			e.printStackTrace();
-			System.exit(-1);
+			System.exit(1);
 		}
 		
 		//read gbs data
@@ -2486,7 +2486,7 @@ public class NamGBSData {
 
 		} catch (IOException e) {
 			e.printStackTrace();
-			System.exit(-1);
+			System.exit(1);
 		}
 		
 		//read array data
@@ -2538,7 +2538,7 @@ public class NamGBSData {
 
 		} catch (IOException e) {
 			e.printStackTrace();
-			System.exit(-1);
+			System.exit(1);
 		}
 		
 		//create a combined snp list sorted in order
@@ -2948,7 +2948,7 @@ public class NamGBSData {
 			
 		} catch (IOException e) {
 			e.printStackTrace();
-			System.exit(-1);
+			System.exit(1);
 		}
 		
 		
@@ -3049,7 +3049,7 @@ public class NamGBSData {
 				br.close();
 			} catch (IOException e) {
 				e.printStackTrace();
-				System.exit(-1);
+				System.exit(1);
 			}
 		}
 		
@@ -3096,7 +3096,7 @@ public class NamGBSData {
 				br.close();
 			} catch (IOException e) {
 				e.printStackTrace();
-				System.exit(-1);
+				System.exit(1);
 			}
 		}
 		
@@ -3150,7 +3150,7 @@ public class NamGBSData {
 				br.close();
 			} catch (IOException e) {
 				e.printStackTrace();
-				System.exit(-1);
+				System.exit(1);
 			}
 		}
 		

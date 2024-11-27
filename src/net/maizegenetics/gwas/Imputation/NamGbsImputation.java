@@ -40,7 +40,7 @@ public class NamGbsImputation {
 			br.close();
 		} catch (IOException e) {
 			e.printStackTrace();
-			System.exit(-1);
+			System.exit(1);
 		}
 
 		//find the intersection of the taxa list and the taxa in the genotype data
@@ -248,7 +248,7 @@ public class NamGbsImputation {
 			bw.close();
 		} catch (IOException e) {
 			e.printStackTrace();
-			System.exit(-1);
+			System.exit(1);
 		}
 		
 	}
@@ -272,7 +272,7 @@ public class NamGbsImputation {
 			br.close();
 		} catch (IOException e) {
 			e.printStackTrace();
-			System.exit(-1);
+			System.exit(1);
 		}
 
 		//find the intersection of the taxa list and the taxa in the genotype data
@@ -464,7 +464,7 @@ public class NamGbsImputation {
 			bw.close();
 		} catch (IOException e) {
 			e.printStackTrace();
-			System.exit(-1);
+			System.exit(1);
 		}
 		
 		//write the results converted to 3 state
@@ -518,7 +518,7 @@ public class NamGbsImputation {
 			bw.close();
 		} catch (IOException e) {
 			e.printStackTrace();
-			System.exit(-1);
+			System.exit(1);
 		}
 		
 	}
@@ -748,7 +748,7 @@ public class NamGbsImputation {
 			br.close();
 		} catch (IOException e) {
 			e.printStackTrace();
-			System.exit(-1);
+			System.exit(1);
 		}
 		
 		//impute data for each chromosome
@@ -765,7 +765,7 @@ public class NamGbsImputation {
 				br.close();
 			} catch(IOException e) {
 				e.printStackTrace();
-				System.exit(-1);
+				System.exit(1);
 			}
 			
 			//read the snp data
@@ -785,7 +785,7 @@ public class NamGbsImputation {
 				br.close();
 			} catch (IOException e) {
 				e.printStackTrace();
-				System.exit(-1);
+				System.exit(1);
 			}
 
 			double startgenpos = agpmap.getCmFromPosition(chr, pos[0]);
@@ -837,7 +837,7 @@ public class NamGbsImputation {
 				bw.close();
 			} catch (IOException e) {
 				e.printStackTrace();
-				System.exit(-1);
+				System.exit(1);
 			}
 			
 		}

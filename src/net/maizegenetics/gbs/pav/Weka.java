@@ -53,7 +53,8 @@ public class Weka {
             
         }
         catch (Exception e) {
-            System.out.println(e.toString());
+            System.err.println(e.toString());
+    	      e.printStackTrace();
             System.exit(1);
         }
         this.deleteSub(subInputDir);
@@ -81,7 +82,8 @@ public class Weka {
                 System.out.println("Prediction is made at " + name);
             }
             catch (Exception e) {
-                System.out.println(e.toString());
+                System.err.println(e.toString());
+        	      e.printStackTrace();
                 System.exit(1);
             }
         }

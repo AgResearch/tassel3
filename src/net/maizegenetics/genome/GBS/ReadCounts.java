@@ -363,7 +363,7 @@ IntComparator comp = new IntComparator() {
 
    public static void main(String[] args) {
        if((args.length<1)||(args[0].equals("-h"))) {
-           System.out.println("Require args: inDirectory (outDirectory) (-c minCount) (-b txt/binary)");
+           System.err.println("Require args: inDirectory (outDirectory) (-c minCount) (-b txt/binary)");
            System.exit(1);
        } else if (args[0].equals("-f")) {
            ReadCounts be=new ReadCounts(args[1],args[2], 10, true, true, false);
@@ -374,7 +374,7 @@ IntComparator comp = new IntComparator() {
        } else if (args.length==2) {
            ReadCounts be=new ReadCounts(args[0], args[1], 1, true, false, false);
        }  else if (args.length>2) {
-           System.out.println("Need to implement the parser");
+           System.err.println("Need to implement the parser");
            System.exit(1);
        }
   }

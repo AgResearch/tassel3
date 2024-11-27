@@ -175,12 +175,12 @@ public class CombineReadCounts extends ReadCounts {
 
    public static void main(String[] args) {
        if((args.length<2)||(args[0].equals("-h"))) {
-           System.out.println("Require args: inDirectory outFile (-c minCount) (-b txt/binary)");
+           System.err.println("Require args: inDirectory outFile (-c minCount) (-b txt/binary)");
            System.exit(1);
        } else if (args.length==2) {
            CombineReadCounts be=new CombineReadCounts(args[0], args[1], 2, true);
        }  else if (args.length>2) {
-           System.out.println("Need to implement the parser");
+           System.err.println("Need to implement the parser");
            System.exit(1);
        }
   }

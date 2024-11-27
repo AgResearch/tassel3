@@ -58,7 +58,7 @@ public class FilterTraitsDialog extends JDialog implements ActionListener, Table
 		FilterTraitsDialog ftd = new FilterTraitsDialog(null, new SimplePhenotype(new SimpleIdGroup(taxanames), traitList));
 		ftd.setModal(true);
 		ftd.setVisible(true);
-		System.exit(-1);
+		System.exit(0);
 	}
 	
 	protected void init() {

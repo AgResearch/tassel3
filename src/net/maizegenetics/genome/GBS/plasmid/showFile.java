@@ -36,7 +36,7 @@ public class showFile {
 				} else if (dirS.equals("TBTtxt")) {
 					copyPasteDir(sourceDirS, desDirS);
 				} else {
-					System.out.println("There must be missing methods for source directories");
+					System.err.println("There must be missing methods for source directories");
 					System.exit(1);
 				}
 			}

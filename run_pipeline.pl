@@ -44,4 +44,4 @@ if ($java_mem_max eq "") { $java_mem_max = $java_mem_max_default; }
 print "Memory Settings: $java_mem_min $java_mem_max\n";
 print "Tassel Pipeline Arguments: " . "@args\n";
 
-system "java -classpath '$CP' $java_mem_min $java_mem_max net.maizegenetics.pipeline.TasselPipeline @args";
+exec("java -classpath '$CP' $java_mem_min $java_mem_max net.maizegenetics.pipeline.TasselPipeline @args") or die("failed to exec java");

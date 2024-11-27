@@ -444,7 +444,7 @@ public class BiparentalGbsData {
 			
 		} catch(IOException e) {
 			e.printStackTrace();
-			System.exit(-1);
+			System.exit(1);
 		}
 		
 		chromosome = snpList.get(0).chromosome;
@@ -501,7 +501,7 @@ public class BiparentalGbsData {
 			bw.close();
 		} catch(IOException e) {
 			e.printStackTrace();
-			System.exit(-1);
+			System.exit(1);
 		}
 	}
 }

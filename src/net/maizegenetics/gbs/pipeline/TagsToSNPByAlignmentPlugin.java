@@ -696,6 +696,7 @@ public class TagsToSNPByAlignmentPlugin extends AbstractPlugin {
                         myLogger.error("\n\nTagsToSNPByAlignment detected a non-numeric chromosome name in the reference genome sequence fasta file: "+chrS+
                         "\n\nPlease change the FASTA headers in your reference genome sequence to integers "+
                         "(>1, >2, >3, etc.) OR to 'chr' followed by an integer (>chr1, >chr2, >chr3, etc.)\n\n");
+                        e.printStackTrace();
                         System.exit(1);
                     }
                     myLogger.info("Currently reading chromosome "+currChr+" (target chromosome = "+targetChr+")");

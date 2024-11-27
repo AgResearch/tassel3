@@ -44,7 +44,7 @@ public class UMapInfo {
 	private void checkFile (TagsByTaxaByte tbt, UTagPairs tp) {
 		if (tbt.getTagCount() != tp.getTagNum()) {
 			System.out.println("TBT file and TagPair file don't match");
-			System.exit(0);
+			System.exit(1);
 		}
 		System.out.println("TBT file and TagPair file match");
 	}

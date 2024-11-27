@@ -69,7 +69,8 @@ public class TagGWASPGMap extends AbstractTags {
             }
         }
         catch(Exception e) {
-            System.out.println(e.toString());
+            System.err.println(e.toString());
+            e.printStackTrace();
             System.exit(1);
         }
         return ifOut;
@@ -123,7 +124,8 @@ public class TagGWASPGMap extends AbstractTags {
             bw.close();
         }
         catch (Exception e) {
-            System.out.println(e.toString());
+            System.err.println(e.toString());
+            e.printStackTrace();
             System.exit(1);
         }
     }
@@ -159,7 +161,8 @@ public class TagGWASPGMap extends AbstractTags {
             
         }
         catch (Exception e) {
-            System.out.println(e.toString());
+            System.err.println(e.toString());
+            e.printStackTrace();
             System.exit(1);
         }
     }
@@ -311,7 +314,8 @@ public class TagGWASPGMap extends AbstractTags {
             bw.close();
         }
         catch (Exception e) {
-            System.out.println(e.toString());
+            System.err.println(e.toString());
+            e.printStackTrace();
             System.exit(1);
         }
         System.out.println("TagGWASPGMap is written to " + tagGWASPGMapFileS);
@@ -338,7 +342,8 @@ public class TagGWASPGMap extends AbstractTags {
             bw.close();
         }
         catch (Exception e) {
-            System.out.println(e.toString());
+            System.err.println(e.toString());
+            e.printStackTrace();
             System.exit(1);
         }
         System.out.println("TagGWASPGMap is written to " + tagGWASPGMapFileS);
@@ -369,7 +374,8 @@ public class TagGWASPGMap extends AbstractTags {
             }
         }
         catch (Exception e) {
-            System.out.println(e.toString());
+            System.err.println(e.toString());
+            e.printStackTrace();
             System.exit(1);
         }
         System.out.println("TagGWASPGMap is read from " + tagGWASPGMapFileS);
@@ -426,7 +432,8 @@ public class TagGWASPGMap extends AbstractTags {
             }
         }
         catch (Exception e) {
-            System.out.println(e.toString());
+            System.err.println(e.toString());
+            e.printStackTrace();
             System.exit(1);
         }
         System.out.println("Tag GWAS result is read and physical postition is incorporated");

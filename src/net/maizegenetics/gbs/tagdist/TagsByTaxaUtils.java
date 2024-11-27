@@ -306,8 +306,9 @@ public class TagsByTaxaUtils {
                     }
                 break;
                 } catch (Exception e) {
-                    System.out.println("Caught exception while reading binary TBT file header: "+e);
-                    System.exit(0);
+                    System.err.println("Caught exception while reading binary TBT file header: "+e);
+                  	e.printStackTrace();
+                    System.exit(1);
                 }
                 
             case Text:
@@ -323,8 +324,8 @@ public class TagsByTaxaUtils {
                     System.out.println("Caught exception while reading TBT text file header: "+e);
                 }
             default:
-                System.out.println("Couldn't read header: the file format isn't recognized.");
-                System.exit(0);
+                System.err.println("Couldn't read header: the file format isn't recognized.");
+                System.exit(1);
                 break;
         }
         longsInBitset=OpenBitSet.bits2words(numTaxa);
@@ -360,8 +361,8 @@ public class TagsByTaxaUtils {
                 break;
                 
             default:
-                System.out.println("Couldn't print header: the file format isn't recognized.");
-                System.exit(0);
+                System.err.println("Couldn't print header: the file format isn't recognized.");
+                System.exit(1);
         }
     }
 
@@ -521,8 +522,8 @@ public class TagsByTaxaUtils {
                     reader = new BufferedReader(new FileReader(inputFileName), 65536);
                     break;
                 default:
-                    System.out.println("Couldn't determine input file format.");
-                    System.exit(0);
+                    System.err.println("Couldn't determine input file format.");
+                    System.exit(1);
                     break;
             }
             
@@ -535,8 +536,8 @@ public class TagsByTaxaUtils {
                     writer = new BufferedWriter(new FileWriter(outputFileName), 65536);
                     break;
                 default:
-                    System.out.println("Couldn't determine input file format.");
-                    System.exit(0);
+                    System.err.println("Couldn't determine input file format.");
+                    System.exit(1);
                     break;
             }
         } catch(Exception e) {
@@ -683,8 +684,8 @@ public class TagsByTaxaUtils {
                     if(value==0){zeroValues++;}else{nonZeroValues++;}
                 }
             }else{
-                System.out.println("This format isn't recognized by the sparsity function.");
-                System.exit(0);
+                System.err.println("This format isn't recognized by the sparsity function.");
+                System.exit(1);
             }
         }
         long totalValues=zeroValues+nonZeroValues;
@@ -768,8 +769,8 @@ public class TagsByTaxaUtils {
             if(fileExtension.equals(".bin")) format=TagsByTaxa.FilePacking.Bit;
             if(fileExtension.equals(".byte")) format=TagsByTaxa.FilePacking.Byte;
             if(format==null){
-                System.out.println("Couldn't identify format of input file: "+filename);
-                System.exit(0);
+                System.err.println("Couldn't identify format of input file: "+filename);
+                System.exit(1);
             }
             return format;
     }

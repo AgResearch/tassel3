@@ -283,7 +283,7 @@ public class TagAgainstAnchorLoop {
         else {
             if (coreNum == 0) {
                 System.out.println("Core number = 0, This runs at least on 1 thread. Quit.");
-                System.exit(0);
+                System.exit(1);
             }
             threadNum = coreNum * 1;
             System.out.println("TBT will be mapped by " + threadNum + " tasks");
@@ -320,7 +320,8 @@ public class TagAgainstAnchorLoop {
 				lt[i].join();
 			}
 			catch (Exception e) {
-				System.out.println(e.toString());
+				System.err.println(e.toString());
+        e.printStackTrace();
 				System.exit(1);
 			}
 		}

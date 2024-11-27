@@ -58,7 +58,7 @@ public class ArrayGenotypeData implements GenotypeData {
 			br.close();
 		} catch (IOException e) {
 			e.printStackTrace();
-			System.exit(-1);
+			System.exit(1);
 		}
 		
 		myTaxaMap = new HashMap<String, Integer>();
@@ -148,7 +148,7 @@ public class ArrayGenotypeData implements GenotypeData {
 			br.close();
 		} catch (IOException e) {
 			e.printStackTrace();
-			System.exit(-1);
+			System.exit(1);
 		}
 
 		//read genotypes for each pop
@@ -179,7 +179,7 @@ public class ArrayGenotypeData implements GenotypeData {
 				br.close();
 			} catch (IOException e) {
 				e.printStackTrace();
-				System.exit(-1);
+				System.exit(1);
 			}
 		}
 		
@@ -235,7 +235,7 @@ public class ArrayGenotypeData implements GenotypeData {
 			bw.close();
 		} catch (IOException e) {
 			e.printStackTrace();
-			System.exit(-1);
+			System.exit(1);
 		}
 		
 	}

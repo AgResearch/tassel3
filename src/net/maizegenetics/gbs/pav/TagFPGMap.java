@@ -107,7 +107,8 @@ public class TagFPGMap extends TagMPGMap {
             System.out.println("FPGMap mapping check is written to " + outfileS);
         }
         catch (Exception e) {
-            System.out.println(e.toString());
+            System.err.println(e.toString());
+            e.printStackTrace();
             System.exit(1);;
         }
     }
@@ -135,7 +136,8 @@ public class TagFPGMap extends TagMPGMap {
             System.out.println("PAVPos file is written at " + PAVPosFileS);
         }
         catch (Exception e) {
-            System.out.println(e.toString());
+            System.err.println(e.toString());
+            e.printStackTrace();
             System.exit(1);
         }
     }
@@ -237,7 +239,8 @@ public class TagFPGMap extends TagMPGMap {
             System.out.println("AlignCheck file is written at " + alignFrequencyFileS);
         }
         catch (Exception e) {
-            System.out.println(e.toString());
+            System.err.println(e.toString());
+            e.printStackTrace();
             System.exit(1);
         }
     }
@@ -298,7 +301,8 @@ public class TagFPGMap extends TagMPGMap {
             System.out.println("AlignCheck file is written at " + alignFrequencyFileS);
         }
         catch (Exception e) {
-            System.out.println(e.toString());
+            System.err.println(e.toString());
+            e.printStackTrace();
             System.exit(1);
         }
     }
@@ -573,7 +577,8 @@ public class TagFPGMap extends TagMPGMap {
             System.out.println("Fasta file of tagPGMap output in " + outfileS);
         }
         catch (Exception e) {
-            System.out.println(e.toString());
+            System.err.println(e.toString());
+            e.printStackTrace();
             System.exit(1);
         }
     }
@@ -607,7 +612,8 @@ public class TagFPGMap extends TagMPGMap {
             }
         }
         catch (Exception e) {
-            System.out.println(e.toString());
+            System.err.println(e.toString());
+            e.printStackTrace();
             System.exit(1);
         }
         System.out.println("TagGWASPGMap is read from " + tagMPGMapFileS);
@@ -645,7 +651,8 @@ public class TagFPGMap extends TagMPGMap {
             bw.close();
         }
         catch (Exception e) {
-            System.out.println(e.toString());
+            System.err.println(e.toString());
+            e.printStackTrace();
             System.exit(1);
         }
         System.out.println("TagGWASPGMap is written to " + tagMPGMapFileS);
@@ -737,7 +744,8 @@ public class TagFPGMap extends TagMPGMap {
             System.out.println("Fasta file of tagPGMap output in " + outfileS);
         }
         catch (Exception e) {
-            System.out.println(e.toString());
+            System.err.println(e.toString());
+            e.printStackTrace();
             System.exit(1);
         }
     }

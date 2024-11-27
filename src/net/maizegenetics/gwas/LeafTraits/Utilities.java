@@ -14,7 +14,7 @@ public class Utilities {
 			return new BufferedWriter(new FileWriter(filename));
 		} catch (IOException e) {
 			e.printStackTrace();
-			System.exit(-1);
+			System.exit(1);
 		}
 		return null;
 	}
@@ -24,7 +24,7 @@ public class Utilities {
 			return new BufferedWriter(new FileWriter(filename, append));
 		} catch (IOException e) {
 			e.printStackTrace();
-			System.exit(-1);
+			System.exit(1);
 		}
 		return null;
 	}
@@ -34,7 +34,7 @@ public class Utilities {
 			return new BufferedWriter(new FileWriter(file));
 		} catch (IOException e) {
 			e.printStackTrace();
-			System.exit(-1);
+			System.exit(1);
 		}
 		return null;
 	}
@@ -44,7 +44,7 @@ public class Utilities {
 			return new BufferedWriter(new FileWriter(file, append));
 		} catch (IOException e) {
 			e.printStackTrace();
-			System.exit(-1);
+			System.exit(1);
 		}
 		return null;
 	}
@@ -56,7 +56,7 @@ public class Utilities {
 		} catch (IOException e) {
 			e.printStackTrace();
 			try{bw.flush();} catch (Exception e2) {}
-			System.exit(-1);
+			System.exit(1);
 		}
 	}
 
@@ -68,7 +68,7 @@ public class Utilities {
 		} catch (IOException e) {
 			e.printStackTrace();
 			try{bw.flush();} catch (Exception e2) {}
-			System.exit(-1);
+			System.exit(1);
 		}
 	}
 	
@@ -85,7 +85,7 @@ public class Utilities {
 			return new BufferedReader(new FileReader(filename));
 		} catch (IOException e) {
 			e.printStackTrace();
-			System.exit(-1);
+			System.exit(1);
 		}
 		return null;
 	}
@@ -150,10 +150,10 @@ public class Utilities {
 				
 			} catch (FileNotFoundException e) {
 				e.printStackTrace();
-				System.exit(-1);
+				System.exit(1);
 			} catch (IOException e) {
 				e.printStackTrace();
-				System.exit(-1);
+				System.exit(1);
 			}
 		}
 		

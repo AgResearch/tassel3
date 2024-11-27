@@ -237,7 +237,8 @@ public class TagAgainstAnchorBiParental {
 					lt[i].join();
 				}
 				catch (Exception e) {
-					System.out.println(e.toString());
+					System.err.println(e.toString());
+	      e.printStackTrace();
 					System.exit(1);
 				}
 			}
@@ -249,7 +250,7 @@ public class TagAgainstAnchorBiParental {
 			System.out.println("maxMemory: " + Runtime.getRuntime().maxMemory()/1024/1024 + "Mb; freeMemory: " + Runtime.getRuntime().freeMemory()/1024/1024 + "Mb");
         } else {
             System.out.println ("Can't find the anchor map files");
-			System.exit(0);
+			System.exit(1);
         }
 		System.out.println("Anchor maps load at " + this.getCurrentTime());
     }

@@ -155,7 +155,8 @@ public class RatioMatrixB73Permute {
             bw.close();
         }
         catch (Exception e) {
-            System.out.println(e.toString());
+            System.err.println(e.toString());
+            e.printStackTrace();
             System.exit(1);
         }
         String[] id = idList.toArray(new String[idList.size()]);
@@ -506,7 +507,8 @@ public class RatioMatrixB73Permute {
             bw.close();
         }
         catch (Exception e) {
-            System.out.println(e.toString());
+            System.err.println(e.toString());
+            e.printStackTrace();
             System.exit(1);
         }
     }
@@ -532,7 +534,8 @@ public class RatioMatrixB73Permute {
             bw.close();
         }
         catch (Exception e) {
-            System.out.println(e.toString());
+            System.err.println(e.toString());
+            e.printStackTrace();
             System.exit(1);
         }
     }
@@ -595,7 +598,8 @@ public class RatioMatrixB73Permute {
                         pMatrix[i][j][k] = TestUtils.chiSquareTest(count);
                     }
                     catch (Exception e) {
-                        System.out.println(e.toString());
+                        System.err.println(e.toString());
+                        e.printStackTrace();
                         System.exit(1);
                     }
                 }

@@ -84,8 +84,8 @@ public class NoRefHapUtils {
 
 	public void getPairedTBT (ReadsByTaxa rbt, TagPair tp) {
 		if (rbt.haplotypeNum != tp.haplotype[0].length) {
-			System.out.println("TBT file and TagPair file don't match");
-			System.exit(0);
+			System.err.println("TBT file and TagPair file don't match");
+			System.exit(1);
 		}
 		byte[][] newdist = new byte[rbt.haplotypeNum][];
 		long[][] newHaplotype = new long[2][rbt.haplotypeNum];
@@ -149,8 +149,8 @@ public class NoRefHapUtils {
 			System.out.println("Error occured while reading taxaSelection file " + taxaFileS + " " + e.toString());
 		}
 		if (taxaList.size() == 0) {
-			System.out.println("No taxa is selected for hapmap output");
-			System.exit(0);
+			System.err.println("No taxa is selected for hapmap output");
+			System.exit(1);
 		}
 		this.getTaxaIndex(taxaList.toArray(new String[taxaList.size()]));
 	}

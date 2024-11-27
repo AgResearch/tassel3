@@ -326,7 +326,7 @@ public class RatioMatrix {
         int currentSize = this.binStart[0][1] - this.binStart[0][0];
         if (!(regionSize%currentSize == 0)) {
             System.out.println("binSize is not qualified for merging bins");
-            System.exit(0);
+            System.exit(1);
         }
         int[][] newBinStart = new int[this.getChrNum()][];
         int[][] pavCount = new int[this.getChrNum()][];
@@ -508,7 +508,8 @@ public class RatioMatrix {
             bw.close();
         }
         catch (Exception e) {
-            System.out.println(e.toString());
+            System.err.println(e.toString());
+            e.printStackTrace();
             System.exit(1);
         }
         
@@ -540,7 +541,8 @@ public class RatioMatrix {
                     p.waitFor();
                 }
                 catch (Exception e) {
-                    System.out.println(e.toString());
+                    System.err.println(e.toString());
+                    e.printStackTrace();
                     System.exit(1);
                 }
                 byte[] cluster = new WekaInstances().getCluster(outputFileS); 
@@ -594,7 +596,8 @@ public class RatioMatrix {
                     p.waitFor();
                 }
                 catch (Exception e) {
-                    System.out.println(e.toString());
+                    System.err.println(e.toString());
+                    e.printStackTrace();
                     System.exit(1);
                 }
                 byte[] cluster = new WekaInstances().getCluster(outputFileS); 
@@ -770,7 +773,8 @@ public class RatioMatrix {
             dos.close();
         }
         catch (Exception e) {
-            System.out.println(e.toString());
+            System.err.println(e.toString());
+            e.printStackTrace();
             System.exit(1);
         }
     }
@@ -807,7 +811,8 @@ public class RatioMatrix {
              }
         }
         catch(Exception e) {
-            System.out.println(e.toString());
+            System.err.println(e.toString());
+            e.printStackTrace();
             System.exit(1);
         }
     }
@@ -987,7 +992,8 @@ public class RatioMatrix {
             bw.close();
         }
         catch (Exception e) {
-            System.out.println(e.toString());
+            System.err.println(e.toString());
+            e.printStackTrace();
             System.exit(1);
         }
         
@@ -1014,7 +1020,8 @@ public class RatioMatrix {
             bw.close();
         }
         catch (Exception e) {
-            System.out.println(e.toString());
+            System.err.println(e.toString());
+            e.printStackTrace();
             System.exit(1);
         }
         
@@ -1041,7 +1048,8 @@ public class RatioMatrix {
                         pMatrix[i][j][k] = TestUtils.chiSquareTest(count);
                     }
                     catch (Exception e) {
-                        System.out.println(e.toString());
+                        System.err.println(e.toString());
+                        e.printStackTrace();
                         System.exit(1);
                     }
                 }

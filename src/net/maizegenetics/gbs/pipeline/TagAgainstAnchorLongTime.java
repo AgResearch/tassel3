@@ -290,7 +290,8 @@ public class TagAgainstAnchorLongTime {
 					lt[i].join();
 				}
 				catch (Exception e) {
-					System.out.println(e.toString());
+					System.err.println(e.toString());
+          e.printStackTrace();
 					System.exit(1);
 				}
 			}

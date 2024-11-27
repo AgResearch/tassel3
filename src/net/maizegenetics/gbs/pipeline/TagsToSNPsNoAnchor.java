@@ -56,11 +56,11 @@ public class TagsToSNPsNoAnchor {
     	//do some checks
     	if(maxMissingData>1 || maxMissingData<0){
     		System.out.println("Max Missing Data (maxMissingData) must be between 0 and 1.  Entered Value: " + maxMissingData);
-    		System.exit(0);
+    		System.exit(1);
     	}
     	if(minAlleleFreq>0.5 || minAlleleFreq<0){
     		System.out.println("Minimum Allele Frequency (minAlleleFreq) must be between 0 and 0.5.  Entered Value: " + minAlleleFreq);
-    		System.exit(0);
+    		System.exit(1);
     	}
     	
     	
@@ -346,11 +346,11 @@ public class TagsToSNPsNoAnchor {
     	//do some checks
     	if(maxMissingData>1 || maxMissingData<0){
     		System.out.println("Max Missing Data (maxMissingData) must be between 0 and 1.  Entered Value: " + maxMissingData);
-    		System.exit(0);
+    		System.exit(1);
     	}
     	if(minAlleleFreq>0.5 || minAlleleFreq<0){
     		System.out.println("Minimum Allele Frequency (minAlleleFreq) must be between 0 and 0.5.  Entered Value: " + minAlleleFreq);
-    		System.exit(0);
+    		System.exit(1);
     	}
     	
     	
@@ -800,11 +800,11 @@ public class TagsToSNPsNoAnchor {
     	//do some checks
     	if(maxMissingData>1 || maxMissingData<0){
     		System.out.println("Max Missing Data (maxMissingData) must be between 0 and 1.  Entered Value: " + maxMissingData);
-    		System.exit(0);
+    		System.exit(1);
     	}
     	if(minAlleleFreq>0.5 || minAlleleFreq<0){
     		System.out.println("Minimum Allele Frequency (minAlleleFreq) must be between 0 and 0.5.  Entered Value: " + minAlleleFreq);
-    		System.exit(0);
+    		System.exit(1);
     	}
     	
     	

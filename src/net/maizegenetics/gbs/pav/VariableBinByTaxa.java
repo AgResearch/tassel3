@@ -341,7 +341,8 @@ public class VariableBinByTaxa {
             System.out.println("Binary BBT file read from " + infileS);
         }
         catch (Exception e) {
-            System.out.println(e.toString());
+            System.err.println(e.toString());
+            e.printStackTrace();
             System.exit(1);
         }
     }
@@ -375,7 +376,8 @@ public class VariableBinByTaxa {
             System.out.println("Binary BBT file is written to " + outfileS);
         }
         catch (Exception e) {
-            System.out.println(e.toString());
+            System.err.println(e.toString());
+            e.printStackTrace();
             System.exit(1);
         }
     }
@@ -405,7 +407,8 @@ public class VariableBinByTaxa {
             System.out.println("Txt BBT file is written to " + outfileS);
         }
         catch (Exception e) {
-            System.out.println(e.toString());
+            System.err.println(e.toString());
+            e.printStackTrace();
             System.exit(1);
         }
     }
@@ -449,7 +452,8 @@ public class VariableBinByTaxa {
 			dis.close();
         }
         catch (Exception e) {
-            System.out.println(e.toString());
+            System.err.println(e.toString());
+            e.printStackTrace();
             System.exit(1);
         }
     }

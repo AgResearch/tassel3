@@ -617,7 +617,7 @@ public class TagsOnPhysicalMap extends AbstractTags {
             }
             br.close();
         } catch (Exception e) {
-            System.out.println("\n\nCatch in reading SAM alignment file at tag " + tagIndex + ":\n\t"+inputStr+"\nError: " + e + "\n\n");
+            System.err.println("\n\nCatch in reading SAM alignment file at tag " + tagIndex + ":\n\t"+inputStr+"\nError: " + e + "\n\n");
             e.printStackTrace();
             System.exit(1);
         }
@@ -653,7 +653,7 @@ public class TagsOnPhysicalMap extends AbstractTags {
             br.close();
             System.out.println("Found "+tagNum+" tags in SAM file.  Assuming "+mySAMFormat+" file format.");
 	} catch (Exception e) {
-	    System.out.println("Catch in counting lines of alignment file at line "+currLine+": "+e);
+	    System.err.println("Catch in counting lines of alignment file at line "+currLine+": "+e);
             e.printStackTrace();
             System.exit(1);
 	}
@@ -781,9 +781,10 @@ public class TagsOnPhysicalMap extends AbstractTags {
         try {
             chr = Integer.parseInt(chrS);
         } catch (NumberFormatException e) {
-            System.out.println("\n\nSAMConverterPlugin detected a non-numeric chromosome name: "+chrS+
+            System.err.println("\n\nSAMConverterPlugin detected a non-numeric chromosome name: "+chrS+
             "\n\nPlease change the FASTA headers in your reference genome sequence to integers "+
             "(>1, >2, >3, etc.) OR to 'chr' followed by an integer (>chr1, >chr2, >chr3, etc.)\n\n");
+            e.printStackTrace();
             System.exit(1);
         }
         return chr;
@@ -802,7 +803,7 @@ public class TagsOnPhysicalMap extends AbstractTags {
                 throw new Exception("Unexpected value for strand: " + strand + "(expect 1 or -1)");
             }
         } catch (Exception e) {
-            System.out.println("Error in recordStartEndPostionFromSAMAlign: " + e);
+            System.err.println("Error in recordStartEndPostionFromSAMAlign: " + e);
             e.printStackTrace();
             System.exit(1);
         }

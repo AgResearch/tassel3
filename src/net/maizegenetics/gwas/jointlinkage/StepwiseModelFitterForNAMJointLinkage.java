@@ -165,7 +165,7 @@ public class StepwiseModelFitterForNAMJointLinkage {
 			bw.newLine();
 		} catch(IOException e) {
 			e.printStackTrace();
-			System.exit(-1);
+			System.exit(1);
 		}
 
 		for (int perm = 0; perm < npermutations; perm++) {
@@ -207,7 +207,7 @@ public class StepwiseModelFitterForNAMJointLinkage {
 			bw.close();
 		} catch(IOException e) {
 			e.printStackTrace();
-			System.exit(-1);
+			System.exit(1);
 		}
 
 	}
@@ -654,7 +654,7 @@ public class StepwiseModelFitterForNAMJointLinkage {
 			}
 		} catch (IOException e) {
 			e.printStackTrace();
-			System.exit(-1);
+			System.exit(1);
 		}
 	}
 
@@ -673,7 +673,7 @@ public class StepwiseModelFitterForNAMJointLinkage {
 			
 		} catch (IOException e) {
 			e.printStackTrace();
-			System.exit(-1);
+			System.exit(1);
 		}
 	}
 
