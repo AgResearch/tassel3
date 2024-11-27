@@ -138,6 +138,7 @@ public class TasselPipeline implements PluginListener {
             }
 
         } catch (Exception e) {
+            e.printStackTrace();
             System.exit(1);
         }
 
