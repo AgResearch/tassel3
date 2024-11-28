@@ -75,7 +75,7 @@ public class UTagPairFinder {
 	}
 	private void reduceDuplicates() {
       int start=0, end=-1, duplicated=0;
-	  long currHap = lookup[0];
+	  long currHap = lookup.length > 0 ? lookup[0] : 0;
       for (int i = 0; i < lookup.length; i++) {
           if(lookup[i]==currHap) {end=i;}
           else {

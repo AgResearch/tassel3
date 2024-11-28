@@ -93,7 +93,7 @@ public class UNetworkFilter {
 		}
 		Arrays.sort(tps);
 		ArrayList<TagAlignment> tpList = new ArrayList();
-		TagAlignment currentTagPair = tps[0];
+		TagAlignment currentTagPair = tps.length > 0 ? tps[0] : new TagAlignment(0, 0);
 		int count = 1;
 		for (int i = 1; i < tps.length; i++) {
 			if (tps[i].equals(currentTagPair)) {
