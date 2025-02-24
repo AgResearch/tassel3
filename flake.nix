@@ -52,7 +52,7 @@
                 for prog in run_gbs_pipeline.pl run_pipeline.pl start_tassel.pl; do
                   wrapProgram $out/bin/''$prog --set PATH "${lib.makeBinPath [
                     jdk8
-                  ]}"
+                  ]}" --unset LD_LIBRARY_PATH --set JAVA_HOME "${jdk8}"
                 done
               '';
             };
